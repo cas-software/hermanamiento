@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Editor directories
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# PWA cache
+*-cache-v*
