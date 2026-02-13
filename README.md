@@ -25,13 +25,13 @@ git clone https://github.com/TU_USUARIO/hermanamiento.git
 cd hermanamiento
 ```
 
-2. Abre `PWA/index.html` en tu navegador o usa un servidor local:
+2. Abre `docs/index.html` en tu navegador o usa un servidor local:
 ```bash
 # Con Python 3
-python -m http.server 8000
+cd docs && python -m http.server 8000
 
 # Con Node.js (http-server)
-npx http-server PWA -p 8000
+npx http-server docs -p 8000
 ```
 
 3. Accede a `http://localhost:8000`
@@ -39,7 +39,7 @@ npx http-server PWA -p 8000
 ## 📁 Estructura del Proyecto
 
 ```
-PWA/
+docs/
 ├── index.html              # Página principal
 ├── manifest.json           # Configuración PWA
 ├── service-worker.js       # Service Worker para caché offline
