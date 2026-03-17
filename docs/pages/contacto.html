@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de contacto e información - Hermanamiento 2026">
+  <meta name="theme-color" content="#1D3B84">
+
+  <title>Contacto - Hermanamiento 2026</title>
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/icons/icon-72x72.svg">
+  <link rel="manifest" href="../manifest.json">
+
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/animations.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../" class="logo">
+        Hermanamiento<span>2026</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="../">Inicio</a></li>
+        <li><a href="evento.html">Evento</a></li>
+        <li><a href="culto.html">Culto</a></li>
+        <li><a href="recorrido.html">Recorrido</a></li>
+        <li><a href="fiesta.html">Confraternidad</a></li>
+        <li><a href="protocolo.html">Protocolo</a></li>
+        <li><a href="ciudades.html">Ciudades</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="height: 50vh;">
+      <div class="hero-bg" style="background: linear-gradient(135deg, #1D3B84 0%, #152B60 100%);"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Contacto</h1>
+        <p>Formulario de contacto e información</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="breadcrumb mb-4">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <span>Contacto</span>
+        </div>
+
+        <article>
+          <h2>Contacto</h2>
+          <p class="text-lead">Contenido pendiente de confirmar información</p>
+
+          <p>Esta sección será completada con la información específica de esta actividad.</p>
+
+          <h3>Información destacada</h3>
+          <p>Los detalles se agregarán una vez se confirme la información para esta sección.</p>
+
+          <h3>Galería</h3>
+          <p>Las fotos de esta actividad estarán disponibles aquí.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container text-center">
+        <h2>Más información</h2>
+        <a href="../" class="btn btn-primary mt-4">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- NAV TOGGLE SCRIPT -->
+  <script>
+    document
+      .querySelector(".menu-toggle")
+      .addEventListener("click", function () {
+        document
+          .querySelector(".nav-menu")
+          .classList.toggle("is-open");
+        this.setAttribute(
+          "aria-expanded",
+          document
+            .querySelector(".nav-menu")
+            .classList.contains("is-open"),
+        );
+      });
+    document.querySelectorAll(".nav-menu a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        document
+          .querySelector(".nav-menu")
+          .classList.remove("is-open");
+      });
+    });
+  </script>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Colonia Valdense - Luserna San Giovanni</h4>
+          <p>Visita de la delegación de Luserna San Giovanni a Colonia Valdense, celebrando el hermanamiento, la memoria compartida y los lazos de cooperación entre ambas comunidades.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <ul class="list-clean">
+            <li><a href="../">Inicio</a></li>
+            <li><a href="evento.html">Evento</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="ciudades.html">Ciudades</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Actividades</h4>
+          <ul class="list-clean">
+            <li><a href="culto.html">Culto Religioso</a></li>
+            <li><a href="recorrido.html">Recorrido histórico</a></li>
+            <li><a href="fiesta.html">Confraternidad</a></li>
+            <li><a href="protocolo.html">Acto protocolar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Asociación Familia Piamontesa de Colonia Valdense. Todos los derechos reservados.</p>
+        <p style="margin-top: var(--spacing-sm); font-size: 0.85rem;">Visita de fraternidad · Marzo 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/app.js"></script>
+  <script src="../register-sw.js"></script>
+</body>
+
+</html>

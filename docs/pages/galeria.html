@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Todas las fotos de la visita - Hermanamiento 2026">
+  <meta name="theme-color" content="#1D3B84">
+
+  <title>Galería de fotos - Hermanamiento 2026</title>
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/icons/icon-72x72.svg">
+  <link rel="manifest" href="../manifest.json">
+
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <link rel="stylesheet" href="../assets/styles/layout.css">
+  <link rel="stylesheet" href="../assets/styles/typography.css">
+  <link rel="stylesheet" href="../assets/styles/animations.css">
+  <link rel="stylesheet" href="../assets/styles/responsive.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="../" class="logo">
+        Hermanamiento<span>2026</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-menu">
+        <li><a href="../">Inicio</a></li>
+        <li><a href="evento.html">Evento</a></li>
+        <li><a href="culto.html">Culto</a></li>
+        <li><a href="recorrido.html">Recorrido</a></li>
+        <li><a href="fiesta.html">Confraternidad</a></li>
+        <li><a href="protocolo.html">Protocolo</a></li>
+        <li><a href="ciudades.html">Ciudades</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="height: 50vh;">
+      <div class="hero-bg" style="background: linear-gradient(135deg, #1D3B84 0%, #152B60 100%);"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Galería de fotos</h1>
+        <p>Todas las fotos de la visita</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="breadcrumb mb-4">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <span>Galería de fotos</span>
+        </div>
+
+        <!-- Filtros de categoría -->
+        <div class="galeria-filtros">
+          <button class="filtro-btn active" data-filtro="todas">Todas</button>
+          <button class="filtro-btn" data-filtro="culto">Culto</button>
+          <button class="filtro-btn" data-filtro="confraternidad">Confraternidad</button>
+          <button class="filtro-btn" data-filtro="recorrido">Recorrido</button>
+          <button class="filtro-btn" data-filtro="protocolo">Protocolo</button>
+        </div>
+
+        <!-- Contador de fotos -->
+        <p class="galeria-contador"><span id="contador-visible">40</span> fotos</p>
+
+        <!-- Grid de galería -->
+        <div class="galeria-masonry" id="galeriaGrid">
+
+          <!-- CULTO -->
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-01.jpg" alt="Culto valdense - 01" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-02.jpg" alt="Culto valdense - 02" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-03.jpg" alt="Culto valdense - 03" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-04.jpg" alt="Culto valdense - 04" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-05.jpg" alt="Culto valdense - 05" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-06.jpg" alt="Culto valdense - 06" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="culto">
+            <img src="../assets/images/CULTO/Culto-07.jpg" alt="Culto valdense - 07" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <!-- FIESTA / CONFRATERNIDAD -->
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-01.jpg" alt="Almuerzo de confraternidad - 01" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-02.jpg" alt="Almuerzo de confraternidad - 02" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-03.jpg" alt="Almuerzo de confraternidad - 03" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-04.jpg" alt="Almuerzo de confraternidad - 04" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-05.jpg" alt="Almuerzo de confraternidad - 05" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-06.jpg" alt="Almuerzo de confraternidad - 06" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-07.jpg" alt="Almuerzo de confraternidad - 07" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-08.jpg" alt="Almuerzo de confraternidad - 08" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-09.jpg" alt="Almuerzo de confraternidad - 09" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-10.jpg" alt="Almuerzo de confraternidad - 10" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-11.jpg" alt="Almuerzo de confraternidad - 11" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-12.jpg" alt="Almuerzo de confraternidad - 12" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="confraternidad">
+            <img src="../assets/images/FIESTA/FIESTA-13.jpg" alt="Almuerzo de confraternidad - 13" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <!-- RECORRIDO -->
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-01.jpg" alt="Recorrido histórico - 01" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-02.jpg" alt="Recorrido histórico - 02" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-03.jpg" alt="Recorrido histórico - 03" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-04.jpg" alt="Recorrido histórico - 04" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-05.jpg" alt="Recorrido histórico - 05" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="recorrido">
+            <img src="../assets/images/RECORRIDO/Recorrido-06.jpg" alt="Recorrido histórico - 06" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+
+          <!-- PROTOCOLO -->
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-01.jpg" alt="Acto protocolar - 01" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-02.jpg" alt="Acto protocolar - 02" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-03.jpg" alt="Acto protocolar - 03" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-04.jpg" alt="Acto protocolar - 04" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-05.jpg" alt="Acto protocolar - 05" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-06.jpg" alt="Acto protocolar - 06" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-07.jpg" alt="Acto protocolar - 07" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-08.jpg" alt="Acto protocolar - 08" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Protocolo-09.jpg" alt="Acto protocolar - 09" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gal-item" data-categoria="protocolo">
+            <img src="../assets/images/PROTOCOLO/Piamonte-Rodriguez-01.jpg" alt="Visita Intendencia - 01" loading="lazy" />
+            <div class="gal-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar"><i class="fas fa-xmark"></i></button>
+          <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="lightbox-img-wrap">
+            <img src="" alt="" id="lightboxImg" />
+          </div>
+          <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+          <p class="lightbox-counter" id="lightboxCounter"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container text-center">
+        <a href="../" class="btn btn-primary mt-4">Volver al inicio</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- NAV TOGGLE SCRIPT -->
+  <script>
+    document
+      .querySelector(".menu-toggle")
+      .addEventListener("click", function () {
+        document
+          .querySelector(".nav-menu")
+          .classList.toggle("is-open");
+        this.setAttribute(
+          "aria-expanded",
+          document
+            .querySelector(".nav-menu")
+            .classList.contains("is-open"),
+        );
+      });
+    document.querySelectorAll(".nav-menu a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        document
+          .querySelector(".nav-menu")
+          .classList.remove("is-open");
+      });
+    });
+  </script>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Colonia Valdense - Luserna San Giovanni</h4>
+          <p>Visita de la delegación de Luserna San Giovanni a Colonia Valdense, celebrando el hermanamiento, la memoria compartida y los lazos de cooperación entre ambas comunidades.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <ul class="list-clean">
+            <li><a href="../">Inicio</a></li>
+            <li><a href="evento.html">Evento</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="ciudades.html">Ciudades</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Actividades</h4>
+          <ul class="list-clean">
+            <li><a href="culto.html">Culto Religioso</a></li>
+            <li><a href="recorrido.html">Recorrido histórico</a></li>
+            <li><a href="fiesta.html">Confraternidad</a></li>
+            <li><a href="protocolo.html">Acto protocolar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Asociación Familia Piamontesa de Colonia Valdense. Todos los derechos reservados.</p>
+        <p style="margin-top: var(--spacing-sm); font-size: 0.85rem;">Visita de fraternidad · Marzo 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* === FILTROS === */
+    .galeria-filtros {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .filtro-btn {
+      padding: 0.45rem 1.2rem;
+      border: 2px solid #1D3B84;
+      background: transparent;
+      color: #1D3B84;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .filtro-btn:hover,
+    .filtro-btn.active {
+      background: #1D3B84;
+      color: #fff;
+    }
+    .galeria-contador {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    /* === GRID MASONRY === */
+    .galeria-masonry {
+      columns: 3;
+      column-gap: 0.75rem;
+    }
+    @media (max-width: 768px) { .galeria-masonry { columns: 2; } }
+    @media (max-width: 480px) { .galeria-masonry { columns: 1; } }
+
+    .gal-item {
+      position: relative;
+      margin-bottom: 0.75rem;
+      break-inside: avoid;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gal-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+    .gal-item:hover img {
+      transform: scale(1.04);
+    }
+    .gal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(29, 59, 132, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s;
+      color: #fff;
+      font-size: 1.6rem;
+    }
+    .gal-item:hover .gal-overlay { opacity: 1; }
+
+    /* Ocultar elementos filtrados */
+    .gal-item.oculto {
+      display: none;
+    }
+
+    /* === LIGHTBOX === */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .lightbox.abierto {
+      display: flex;
+    }
+    .lightbox-img-wrap {
+      max-width: 90vw;
+      max-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-img-wrap img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 6px;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 10000;
+      line-height: 1;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s;
+      z-index: 10000;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+    .lightbox-prev { left: 1rem; }
+    .lightbox-next { right: 1rem; }
+    .lightbox-counter {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+    }
+  </style>
+
+  <script>
+    /* === FILTROS === */
+    const filtros = document.querySelectorAll('.filtro-btn');
+    const items = document.querySelectorAll('.gal-item');
+    const contadorEl = document.getElementById('contador-visible');
+
+    function actualizarContador() {
+      const visibles = document.querySelectorAll('.gal-item:not(.oculto)').length;
+      contadorEl.textContent = visibles;
+    }
+
+    filtros.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filtros.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        const filtro = btn.dataset.filtro;
+
+        items.forEach(function(item) {
+          if (filtro === 'todas' || item.dataset.categoria === filtro) {
+            item.classList.remove('oculto');
+          } else {
+            item.classList.add('oculto');
+          }
+        });
+
+        actualizarContador();
+        /* Reconstruir el índice visible para el lightbox */
+        construirIndiceVisible();
+      });
+    });
+
+    /* === LIGHTBOX === */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCounter = document.getElementById('lightboxCounter');
+    let indiceVisible = [];
+    let indiceActual = 0;
+
+    function construirIndiceVisible() {
+      indiceVisible = Array.from(document.querySelectorAll('.gal-item:not(.oculto)'));
+    }
+
+    function abrirLightbox(item) {
+      construirIndiceVisible();
+      indiceActual = indiceVisible.indexOf(item);
+      mostrarFoto(indiceActual);
+      lightbox.classList.add('abierto');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function mostrarFoto(idx) {
+      const img = indiceVisible[idx].querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCounter.textContent = (idx + 1) + ' / ' + indiceVisible.length;
+    }
+
+    function cerrarLightbox() {
+      lightbox.classList.remove('abierto');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+
+    function navegar(dir) {
+      indiceActual = (indiceActual + dir + indiceVisible.length) % indiceVisible.length;
+      mostrarFoto(indiceActual);
+    }
+
+    /* Abrir al hacer clic en cualquier item */
+    items.forEach(function(item) {
+      item.addEventListener('click', function() { abrirLightbox(item); });
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', cerrarLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', function() { navegar(-1); });
+    document.getElementById('lightboxNext').addEventListener('click', function() { navegar(1); });
+
+    /* Cerrar al hacer clic fuera de la imagen */
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) cerrarLightbox();
+    });
+
+    /* Navegación con teclado */
+    document.addEventListener('keydown', function(e) {
+      if (!lightbox.classList.contains('abierto')) return;
+      if (e.key === 'Escape') cerrarLightbox();
+      if (e.key === 'ArrowLeft') navegar(-1);
+      if (e.key === 'ArrowRight') navegar(1);
+    });
+
+    /* Inicializar índice */
+    construirIndiceVisible();
+  </script>
+
+  <script src="../scripts/app.js"></script>
+  <script src="../register-sw.js"></script>
+</body>
+
+</html>

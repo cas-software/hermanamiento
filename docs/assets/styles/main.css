@@ -1,0 +1,796 @@
+/* ================================================
+   HERMANAMIENTO PWA - MAIN STYLES
+   Colonia Valdense & Luserna San Giovanni
+   ================================================ */
+
+:root {
+  /* Color Palette - Balanced 60/30/10 for institutional UI */
+  /* Primary (CTA / Emphasis) */
+  --primary: #CE2B37;
+  /* Rojo Carmín */
+  --primary-hover: #A01F27;
+  /* Rojo Carmín oscuro (hover) */
+
+  /* Secondary (Structure) */
+  --secondary: #1D3B84;
+  /* Azul Profundo */
+  --secondary-hover: #152B60;
+  /* Azul profundo oscuro */
+
+  /* Accents (Interactive support) */
+  --accent: #008C45;
+  /* Verde Institucional */
+  --accent-dark: #006B34;
+  /* Verde oscuro — para texto sobre fondo claro (contraste 7:1) */
+  --accent-hover: #006B34;
+  /* Verde oscuro (hover) */
+
+  /* Neutrals */
+  --bg: #F8F9FA;
+  /* Blanco Nieve */
+  --bg-card: #FFFFFF;
+  /* Blanco Puro */
+  --text: #2C3E50;
+  /* Gris Pizarra */
+  --text-muted: #64748b;
+  /* Texto secundario */
+  --light: #ECF0F1;
+  /* Gris claro */
+  --border: #DDD;
+  /* Bordes */
+  --white: #FFFFFF;
+  /* Blanco Puro */
+
+  /* Shadows (neutral) */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+  --shadow: var(--shadow-sm);
+  --shadow-lg: var(--shadow-md);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Font Sizes */
+  --fs-h1: 3.5rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.8rem;
+  --fs-h4: 1.4rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+
+  /* Border Radius */
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-full: 50%;
+
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s ease;
+
+  /* Z-index */
+  --z-nav: 1000;
+  --z-overlay: 999;
+  --z-modal: 1100;
+}
+
+/* ================================================
+   RESET & BASICS
+   ================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: var(--transition);
+}
+
+/* ================================================
+   TYPOGRAPHY
+   ================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  color: var(--secondary);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+strong {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+small {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+}
+
+/* Lists */
+ul.list-custom,
+ol.list-custom {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-lg);
+}
+
+ul.list-custom li,
+ol.list-custom li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+ul.list-custom li::marker {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* ================================================
+   LINKS & BUTTONS
+   ================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  /* Garantiza que border-color de clases modificadoras no sea pisado */
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.1rem;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+/* ================================================
+   ICONS — FONT AWESOME
+   ================================================ */
+
+.icon-display {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--secondary);
+}
+
+.icon-display i {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.gallery-overlay-icon {
+  font-size: 1.8rem;
+  color: var(--white);
+  opacity: 0.9;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-info-icon {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-right: var(--spacing-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* ================================================
+   CONTAINERS & LAYOUT
+   ================================================ */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ================================================
+   IMAGES & MEDIA
+   ================================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[loading="lazy"] {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ================================================
+   FORMS
+   ================================================ */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  font-size: var(--fs-body);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  transition: var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(206, 43, 55, 0.08);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ================================================
+   CARDS & BOXES
+   ================================================ */
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--light);
+}
+
+.card-body {
+  margin-bottom: var(--spacing-md);
+}
+
+.card-footer {
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--light);
+}
+
+/* ================================================
+   ACTIVITY CARDS — HERMANAMIENTO
+   Franja bicolor Italia / Uruguay en base de imagen
+   ================================================ */
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.07);
+  border: 0.5px solid var(--border);
+  transition: var(--transition);
+}
+
+.activity-card:hover {
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.13);
+  transform: translateY(-6px);
+}
+
+/* Wrapper que contiene imagen + franja */
+.activity-card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.activity-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition);
+}
+
+.activity-card:hover .activity-card-image {
+  transform: scale(1.06);
+}
+
+/* ── Franja partida: Italia izq · Uruguay der ── */
+.activity-card-flag-stripe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  display: flex;
+  z-index: 2;
+}
+
+/* Mitad Italia */
+.flag-stripe-it {
+  display: flex;
+  flex: 1;
+}
+
+.flag-stripe-it span:nth-child(1) {
+  flex: 1;
+  background: #009246;
+}
+
+.flag-stripe-it span:nth-child(2) {
+  flex: 1;
+  background: #f0f0f0;
+}
+
+.flag-stripe-it span:nth-child(3) {
+  flex: 1;
+  background: #ce2b37;
+}
+
+/* Separador central */
+.flag-stripe-sep {
+  width: 1.5px;
+  background: rgba(255, 255, 255, 0.75);
+  flex-shrink: 0;
+}
+
+/* Mitad Uruguay (franjas celeste / blanco) */
+.flag-stripe-uy {
+  display: flex;
+  flex: 1;
+}
+
+.flag-stripe-uy span:nth-child(1) {
+  flex: 1;
+  background: #5B9BD5;
+}
+
+.flag-stripe-uy span:nth-child(2) {
+  flex: 1;
+  background: #f0f0f0;
+}
+
+.flag-stripe-uy span:nth-child(3) {
+  flex: 1;
+  background: #5B9BD5;
+}
+
+.flag-stripe-uy span:nth-child(4) {
+  flex: 1;
+  background: #f0f0f0;
+}
+
+.flag-stripe-uy span:nth-child(5) {
+  flex: 1;
+  background: #5B9BD5;
+}
+
+/* ── Cuerpo de la tarjeta ── */
+.activity-card-content {
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: var(--white);
+}
+
+/* Eyebrow de categoría */
+.activity-card-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.activity-card h3 {
+  font-size: 1.15rem;
+  color: var(--secondary);
+  /* azul profundo — contraste 9:1 sobre blanco */
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.activity-card p {
+  font-size: 0.925rem;
+  color: #374151;
+  /* gris carbón oscuro — contraste 11:1 sobre blanco */
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-md);
+}
+
+.activity-card .btn-outline {
+  align-self: flex-start;
+  font-size: 0.875rem;
+  padding: 7px 18px;
+  border-radius: 20px;
+  /* Siempre visible: fondo azul tenue, texto azul oscuro */
+  color: var(--secondary);
+  border: 1.5px solid var(--secondary);
+  background: rgba(29, 59, 132, 0.07);
+  text-decoration: none;
+}
+
+.activity-card .btn-outline:hover {
+  background: var(--secondary);
+  color: var(--white);
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* ================================================
+   GRID SYSTEM
+   ================================================ */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ================================================
+   UTILITIES
+   ================================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #999;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mb-2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-4 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-5 {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: var(--spacing-xs);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-3 {
+  margin-top: var(--spacing-md);
+}
+
+.mt-4 {
+  margin-top: var(--spacing-lg);
+}
+
+.mt-5 {
+  margin-top: var(--spacing-xl);
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.py-1 {
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+}
+
+.py-2 {
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.py-3 {
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+}
+
+.py-4 {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.px-1 {
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
+}
+
+.px-2 {
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+}
+
+.px-3 {
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+.px-4 {
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.border-top {
+  border-top: 1px solid var(--border);
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--border);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

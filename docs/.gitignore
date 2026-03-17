@@ -28,7 +28,7 @@ Captura*.png
 # Carpetas de trabajo / versiones anteriores
 HERMANAMIENTO/
 PWA/
-# docs/ - Descomentado para GitHub Pages
+docs/
 
 # Archivos de trabajo que no van al repo
 index-old.html
