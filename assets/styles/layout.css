@@ -442,5 +442,5 @@ footer {
 }
 
 .breadcrumb span {
-  color: var(--border);
+  color: var(--text);
 }
