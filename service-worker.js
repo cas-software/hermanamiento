@@ -2,25 +2,28 @@ const CACHE_NAME = 'hermanamiento-pwa-v1';
 const RUNTIME_CACHE = 'hermanamiento-runtime-v1';
 const ASSETS_CACHE = 'hermanamiento-assets-v1';
 
+// Detectar base path: /hermanamiento/ en GitHub Pages, / en local
+const BASE_PATH = self.location.pathname.startsWith('/hermanamiento') ? '/hermanamiento' : '';
+
 const PRECACHE_URLS = [
-  '/hermanamiento/',
-  '/hermanamiento/index.html',
-  '/hermanamiento/pages/evento.html',
-  '/hermanamiento/pages/culto.html',
-  '/hermanamiento/pages/recorrido.html',
-  '/hermanamiento/pages/fiesta.html',
-  '/hermanamiento/pages/protocolo.html',
-  '/hermanamiento/pages/ciudades.html',
-  '/hermanamiento/pages/galeria.html',
-  '/hermanamiento/pages/contacto.html',
-  '/hermanamiento/assets/styles/main.css',
-  '/hermanamiento/assets/styles/layout.css',
-  '/hermanamiento/assets/styles/typography.css',
-  '/hermanamiento/assets/styles/animations.css',
-  '/hermanamiento/assets/styles/responsive.css',
-  '/hermanamiento/scripts/app.js',
-  '/hermanamiento/manifest.json',
-  '/hermanamiento/offline.html'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/pages/evento.html`,
+  `${BASE_PATH}/pages/culto.html`,
+  `${BASE_PATH}/pages/recorrido.html`,
+  `${BASE_PATH}/pages/fiesta.html`,
+  `${BASE_PATH}/pages/protocolo.html`,
+  `${BASE_PATH}/pages/ciudades.html`,
+  `${BASE_PATH}/pages/galeria.html`,
+  `${BASE_PATH}/pages/contacto.html`,
+  `${BASE_PATH}/assets/styles/main.css`,
+  `${BASE_PATH}/assets/styles/layout.css`,
+  `${BASE_PATH}/assets/styles/typography.css`,
+  `${BASE_PATH}/assets/styles/animations.css`,
+  `${BASE_PATH}/assets/styles/responsive.css`,
+  `${BASE_PATH}/scripts/app.js`,
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/offline.html`
 ];
 
 // INSTALL EVENT
@@ -108,7 +111,7 @@ async function cacheFirstStrategy(request) {
 
     // Serve offline page for document requests
     if (request.destination === 'document') {
-      return caches.match('/hermanamiento/offline.html');
+      return caches.match(`${BASE_PATH}/offline.html`);
     }
 
     // Return generic error response

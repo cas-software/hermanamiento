@@ -7,8 +7,9 @@ if ('serviceWorker' in navigator) {
 
 async function registerServiceWorker() {
   try {
-    const registration = await navigator.serviceWorker.register('/hermanamiento/service-worker.js', {
-      scope: '/hermanamiento/'
+    const basePath = location.pathname.startsWith('/hermanamiento') ? '/hermanamiento' : '';
+    const registration = await navigator.serviceWorker.register(`${basePath}/service-worker.js`, {
+      scope: `${basePath}/`
     });
 
     console.log('Service Worker registrado con éxito:', registration.scope);
