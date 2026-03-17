@@ -3,24 +3,24 @@ const RUNTIME_CACHE = 'hermanamiento-runtime-v1';
 const ASSETS_CACHE = 'hermanamiento-assets-v1';
 
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/pages/evento.html',
-  '/pages/culto.html',
-  '/pages/recorrido.html',
-  '/pages/fiesta.html',
-  '/pages/protocolo.html',
-  '/pages/ciudades.html',
-  '/pages/galeria.html',
-  '/pages/contacto.html',
-  '/assets/styles/main.css',
-  '/assets/styles/layout.css',
-  '/assets/styles/typography.css',
-  '/assets/styles/animations.css',
-  '/assets/styles/responsive.css',
-  '/scripts/app.js',
-  '/manifest.json',
-  '/offline.html'
+  '/hermanamiento/',
+  '/hermanamiento/index.html',
+  '/hermanamiento/pages/evento.html',
+  '/hermanamiento/pages/culto.html',
+  '/hermanamiento/pages/recorrido.html',
+  '/hermanamiento/pages/fiesta.html',
+  '/hermanamiento/pages/protocolo.html',
+  '/hermanamiento/pages/ciudades.html',
+  '/hermanamiento/pages/galeria.html',
+  '/hermanamiento/pages/contacto.html',
+  '/hermanamiento/assets/styles/main.css',
+  '/hermanamiento/assets/styles/layout.css',
+  '/hermanamiento/assets/styles/typography.css',
+  '/hermanamiento/assets/styles/animations.css',
+  '/hermanamiento/assets/styles/responsive.css',
+  '/hermanamiento/scripts/app.js',
+  '/hermanamiento/manifest.json',
+  '/hermanamiento/offline.html'
 ];
 
 // INSTALL EVENT
@@ -108,7 +108,7 @@ async function cacheFirstStrategy(request) {
 
     // Serve offline page for document requests
     if (request.destination === 'document') {
-      return caches.match('/offline.html');
+      return caches.match('/hermanamiento/offline.html');
     }
 
     // Return generic error response

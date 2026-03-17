@@ -7,8 +7,8 @@ if ('serviceWorker' in navigator) {
 
 async function registerServiceWorker() {
   try {
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/'
+    const registration = await navigator.serviceWorker.register('/hermanamiento/service-worker.js', {
+      scope: '/hermanamiento/'
     });
 
     console.log('Service Worker registrado con éxito:', registration.scope);
