@@ -1,0 +1,378 @@
+/* ================================================
+   TYPOGRAPHY ADVANCED STYLES
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Font Face Fallbacks */
+@font-face {
+  font-family: 'Playfair Display Fallback';
+  src: local('Georgia'), local('Garamond'), serif;
+  size-adjust: 105%;
+}
+
+/* Article/Content Styling */
+article {
+  line-height: 1.9;
+}
+
+article h1,
+article h2,
+article h3 {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+article h1:first-child {
+  margin-top: 0;
+}
+
+article p {
+  margin-bottom: var(--spacing-md);
+  hyphens: auto;
+}
+
+article blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+article ul,
+article ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+article li {
+  margin-bottom: var(--spacing-sm);
+}
+
+article code {
+  background: var(--light);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--accent);
+}
+
+article pre {
+  background: var(--light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Emphasis Styles */
+em {
+  font-style: italic;
+  /* color heredado del contexto — evita conflicto con textos en fondos oscuros */
+}
+
+strong {
+  font-weight: 700;
+  color: var(--secondary);  /* azul profundo — consistente con main.css */
+}
+
+mark {
+  background-color: rgba(232, 165, 55, 0.2);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Text Utilities */
+.text-lead {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.text-section-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: var(--spacing-lg);
+}
+
+.text-subtle {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.text-highlight {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Heading Variations */
+.heading-large {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.heading-medium {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.heading-small {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  font-weight: 600;
+}
+
+/* Subtitle Styles */
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+}
+
+.tagline {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* Caption Styles */
+.caption {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: var(--spacing-sm);
+  font-style: italic;
+}
+
+/* Paragraph Variants */
+.para-large {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.para-small {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Link Styles */
+.link-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.link-underline:hover {
+  text-decoration-color: var(--accent);
+}
+
+.link-plain {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-plain:hover {
+  text-decoration: underline;
+}
+
+/* Badge/Tag Styles */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--light);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.badge-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.badge-secondary {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.badge-accent {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+/* List Styles */
+.list-clean {
+  list-style: none;
+  padding: 0;
+}
+
+.list-clean li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--light);
+}
+
+.list-clean li:last-child {
+  border-bottom: none;
+}
+
+.list-icons li {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.list-icons li::before {
+  content: '✓';
+  color: var(--secondary);
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* Definition List */
+dt {
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+}
+
+dd {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: #666;
+}
+
+/* Abbreviation */
+abbr {
+  border-bottom: 1px dotted var(--secondary);
+  cursor: help;
+  text-decoration: none;
+}
+
+/* Keyboard & Variables */
+kbd {
+  background: var(--text);
+  color: var(--white);
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+var {
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+/* Superscript & Subscript */
+sup, sub {
+  font-size: 0.8em;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+/* Delete & Insert */
+del {
+  color: #999;
+  text-decoration: line-through;
+}
+
+ins {
+  background-color: rgba(232, 165, 55, 0.2);
+  text-decoration: none;
+  padding: 0 2px;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Divider */
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  margin: var(--spacing-lg) 0;
+  border-radius: 2px;
+}
+
+/* Truncate Text */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Text Shadows */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Transform */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.word-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

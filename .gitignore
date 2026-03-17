@@ -1,18 +1,44 @@
-# Dependencies
+# Dependencias
 node_modules/
 npm-debug.log*
 
-# Editor directories
+# Editor
 .vscode/
 .idea/
 
-# OS files
+# Sistema operativo
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# Variables de entorno
+.env
+.env.*
+
+# MCP
+.mcp
+
+# Archivos temporales
 *.tmp
 *.log
 
-# PWA cache
+# Capturas y documentos de trabajo en raíz
+Captura*.png
+*.docx
+
+# Carpetas de trabajo / versiones anteriores
+HERMANAMIENTO/
+PWA/
+docs/
+
+# Archivos de trabajo que no van al repo
+index-old.html
+BUILD_STATUS.md
+COLOR_PALETTE.md
+VERIFICACION.md
+
+# Scripts de servidor local
+start-server.sh
+
+# Cache PWA
 *-cache-v*
+*-old.css

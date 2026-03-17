@@ -1,0 +1,183 @@
+{
+  "evento": {
+    "nombre": "Visita Institucional Delegación Italiana",
+    "descripcion": "Visita de fraternidad entre Colonia Valdense (Uruguay) y Luserna San Giovanni (Italia)",
+    "fechas": {
+      "inicio": "2026-03-01",
+      "fin": "2026-03-02"
+    },
+    "hermanamiento": {
+      "años": 28,
+      "inicio": 1998,
+      "renovacion": "2026"
+    },
+    "ciudades": {
+      "anfitriona": {
+        "nombre": "Colonia Valdense",
+        "pais": "Uruguay",
+        "departamento": "Colonia",
+        "coordenadas": {
+          "lat": -33.3814,
+          "lng": -56.2789
+        },
+        "poblacion": "~2,500 habitantes",
+        "historia": "Comunidad fundada por colonos italianos piamonteses y valdenses"
+      },
+      "visitante": {
+        "nombre": "Luserna San Giovanni",
+        "pais": "Italia",
+        "region": "Piamonte",
+        "provincia": "Turín",
+        "coordenadas": {
+          "lat": 44.9467,
+          "lng": 7.3517
+        },
+        "poblacion": "~900 habitantes",
+        "historia": "Pueblo histórico centro de la tradición valdense"
+      }
+    },
+    "delegacion": {
+      "cantidad": 13,
+      "representante": "Sonia Rostagnol",
+      "procedencia": "Luserna San Giovanni, Italia"
+    },
+    "actividades": [
+      {
+        "id": "culto",
+        "nombre": "Culto Religioso",
+        "categoria": "religiosa",
+        "fecha": "2026-03-01",
+        "hora": "09:00",
+        "lugar": "Iglesia Evangélica Valdense",
+        "coordenadas": {
+          "lat": -33.3820,
+          "lng": -56.2785
+        },
+        "descripcion": "Ceremonia religiosa abierta a la comunidad",
+        "importancia": "Celebración de la fe valdense compartida",
+        "fotos": 7
+      },
+      {
+        "id": "recorrido",
+        "nombre": "Caminata histórica",
+        "categoria": "cultural",
+        "fecha": "2026-03-01",
+        "hora": "11:30",
+        "lugar": "Centro de Colonia Valdense",
+        "coordenadas": {
+          "lat": -33.3824,
+          "lng": -56.2790
+        },
+        "descripcion": "Recorrido por espacios históricos de la ciudad",
+        "importancia": "Reconocimiento de la historia compartida",
+        "fotos": 6
+      },
+      {
+        "id": "fiesta",
+        "nombre": "Almuerzo de confraternidad",
+        "categoria": "confraternidad",
+        "fecha": "2026-03-01",
+        "hora": "13:00",
+        "lugar": "Club Esparta",
+        "coordenadas": {
+          "lat": -33.3828,
+          "lng": -56.2795
+        },
+        "descripcion": "Encuentro de bienvenida con autoridades y vecinos",
+        "importancia": "Fortalecimiento de vínculos comunitarios",
+        "fotos": 13
+      },
+      {
+        "id": "protocolo",
+        "nombre": "Acto protocolar municipal",
+        "categoria": "institucional",
+        "fecha": "2026-03-02",
+        "hora": "09:00",
+        "lugar": "Municipio de Colonia Valdense",
+        "coordenadas": {
+          "lat": -33.3812,
+          "lng": -56.2788
+        },
+        "descripcion": "Recibimiento oficial con autoridades",
+        "importancia": "Reafirmación de compromisos institucionales",
+        "fotos": 10
+      }
+    ],
+    "instituciones": [
+      {
+        "nombre": "Municipio de Colonia Valdense",
+        "tipo": "Institución local",
+        "rol": "Anfitriona",
+        "contacto": "Alcalde Fernando Eguiluz"
+      },
+      {
+        "nombre": "Intendencia de Colonia",
+        "tipo": "Gobierno provincial",
+        "rol": "Participante",
+        "contacto": "Intendente Guillermo A. Rodríguez"
+      },
+      {
+        "nombre": "Comisión de Hermanamiento",
+        "tipo": "Comisión institucional",
+        "rol": "Coordinadora",
+        "contacto": "Email: hermanamiento@colovalidense.gub.uy"
+      },
+      {
+        "nombre": "Asociación Familia Piamontesa",
+        "tipo": "Organización cultural",
+        "rol": "Colaboradora",
+        "contacto": ""
+      },
+      {
+        "nombre": "Iglesia Evangélica Valdense",
+        "tipo": "Institución religiosa",
+        "rol": "Anfitriona espiritual",
+        "contacto": ""
+      },
+      {
+        "nombre": "Club Esparta",
+        "tipo": "Centro comunitario",
+        "rol": "Anfitrión",
+        "contacto": ""
+      }
+    ],
+    "planes_futuros": {
+      "corto_plazo": [
+        "Establecimiento de canales de comunicación formal",
+        "Documentación de intercambios",
+        "Evaluación de necesidades comunes"
+      ],
+      "mediano_plazo": [
+        "Programas de intercambio cultural",
+        "Participación en festividades mutuas",
+        "Fortalecimiento de vínculos comunitarios"
+      ],
+      "largo_plazo": [
+        "Desarrollo de proyectos de cooperación institucional",
+        "Preservación del patrimonio común",
+        "Expansión de redes de intercambio"
+      ]
+    },
+    "estadisticas": {
+      "total_fotos": 36,
+      "participantes": 13,
+      "dias_evento": 2,
+      "instituciones_participantes": 6
+    }
+  },
+  "contacto": {
+    "email": "hermanamiento@colovalidense.gub.uy",
+    "telefono": "[PENDIENTE DE CONFIRMAR]",
+    "ubicacion": {
+      "ciudad": "Colonia Valdense",
+      "departamento": "Colonia",
+      "pais": "Uruguay"
+    }
+  },
+  "enlaces_utiles": {
+    "google_maps_colonia": "https://maps.google.com/?q=Colonia+Valdense+Uruguay",
+    "google_maps_luserna": "https://maps.google.com/?q=Luserna+San+Giovanni+Turin+Italy",
+    "municipio": "[PENDIENTE]",
+    "intendencia": "[PENDIENTE]"
+  }
+}
